@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block head%}
+<title>TODO APP</title>
+{%endblock%}
+
+{%block body%}
+<div class="container">
+    <h1>Upadte your task</h1>
+    <form action="/update/{{task.id}}" method="POST">
+        <input type="text" name="content" id="content" value="{{task.content}}" />
+        <button type="submit" value="update">Update</button>
+    </form>
+</div>
+{%endblock%}
